@@ -26,10 +26,10 @@ public class Driver {
         list.add(new ItemEntry(software1, 123));
         list.add(new ItemEntry(software2, 213));
 
-
+        System.out.printf(" %-35s%-15s%-15s%-15s \n" ,"Title", "Type", "Price", "Price");
+        System.out.println("-----------------------------------------------------------------------");
         for (ItemEntry ie : list) {
-            String str = String.format("%1$s, %2$s, %3$f, %4$i", ie.getItem().getTitle(), ie.getClass().getSimpleName(), ie.getItem().getPrice(), ie.getQuanity());
-            System.out.println(str);
+            System.out.printf("| %-30s | %-10s | %8.2f | %10d |\n" ,ie.getItem().getTitle(), ie.getItem().getClass().getSimpleName(), ie.getItem().getPrice(), ie.getQuanity());
         }
 
     }
